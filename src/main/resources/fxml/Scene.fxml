@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rafsanjani.omni.FXMLController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="450.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+         <children>
+            <ImageView fx:id="posterView" fitHeight="350.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <VBox prefHeight="450.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox spacing="20.0">
+               <children>
+                  <TextField fx:id="movieNameField" promptText="Type Movie Name" />
+                    <Button fx:id="searchButton" onAction="#searchAction" prefHeight="25.0" prefWidth="69.0" text="Search" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <VBox>
+               <children>
+                  <Label fx:id="titleLabel" text="Title" />
+                  <Label fx:id="yearLabel" text="Year" />
+                  <Label fx:id="runtimeLabel" text="Runtime" />
+                  <Label fx:id="actorsLabel" text="Actors" />
+                  <Label fx:id="languageLabel" text="Language" />
+                  <Label fx:id="directorLabel" text="Director" />
+                  <Label fx:id="rottenLabel" text="Rotten Tomates" />
+                  <Label fx:id="imdbLabel" text="IMDB" />
+                  <Label fx:id="metacriticsLabel" text="Metacritics" />
+                  <Label fx:id="ourRatingLabel" text="Our Ratings" />
+                  <Label fx:id="ratedLabel" text="Rated" />
+                  <Label fx:id="releasedLabel" text="Released" />
+                  <Label fx:id="productionLabel" text="Production" />
+                  <Label fx:id="countryLabel" text="Country" />
+                  <Label fx:id="genreLabel" text="Genre" />
+                  <Label fx:id="writerLabel" text="Writer" />
+                  <Label fx:id="plotLabel" text="Plot" />
+                  <Label fx:id="boxOfficeLabel" text="Box Office" />
+                  <Label fx:id="countryLabel" text="Country" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>
