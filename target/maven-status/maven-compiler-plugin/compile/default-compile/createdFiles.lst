@@ -1,4 +1,5 @@
-com\rafsanjani\omni\FXMLController.class
+com\rafsanjani\omni\util\MovieFeed.class
 com\rafsanjani\omni\MainApp.class
-com\rafsanjani\omni\FXMLController$1$1.class
-com\rafsanjani\omni\FXMLController$1.class
+com\rafsanjani\omni\controller\MovieController$1.class
+com\rafsanjani\omni\controller\MovieController.class
+com\rafsanjani\omni\controller\MovieController$2.class

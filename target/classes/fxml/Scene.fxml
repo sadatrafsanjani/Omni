@@ -8,20 +8,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rafsanjani.omni.FXMLController">
+<HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rafsanjani.omni.controller.MovieController">
    <children>
       <VBox alignment="CENTER" prefHeight="450.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
          <children>
-            <ImageView fx:id="posterView" fitHeight="350.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="posterView" fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </VBox>
       <VBox prefHeight="450.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
          <children>
-            <HBox spacing="20.0">
+            <HBox spacing="10.0">
                <children>
-                  <TextField fx:id="movieNameField" promptText="Type Movie Name" />
-                    <Button fx:id="searchButton" onAction="#searchAction" prefHeight="25.0" prefWidth="69.0" text="Search" />
+                  <TextField fx:id="movieNameField" promptText="Movie Title..." />
+                    <Button fx:id="searchButton" onAction="#searchAction" prefHeight="25.0" prefWidth="65.0" text="Search" />
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshView" prefHeight="25.0" prefWidth="65.0" text="Refresh" />
                </children>
                <VBox.margin>
                   <Insets />
@@ -29,25 +29,79 @@
             </HBox>
             <VBox>
                <children>
-                  <Label fx:id="titleLabel" text="Title" />
-                  <Label fx:id="yearLabel" text="Year" />
-                  <Label fx:id="runtimeLabel" text="Runtime" />
-                  <Label fx:id="actorsLabel" text="Actors" />
-                  <Label fx:id="languageLabel" text="Language" />
-                  <Label fx:id="directorLabel" text="Director" />
-                  <Label fx:id="rottenLabel" text="Rotten Tomates" />
-                  <Label fx:id="imdbLabel" text="IMDB" />
-                  <Label fx:id="metacriticsLabel" text="Metacritics" />
-                  <Label fx:id="ourRatingLabel" text="Our Ratings" />
-                  <Label fx:id="ratedLabel" text="Rated" />
-                  <Label fx:id="releasedLabel" text="Released" />
-                  <Label fx:id="productionLabel" text="Production" />
-                  <Label fx:id="countryLabel" text="Country" />
-                  <Label fx:id="genreLabel" text="Genre" />
-                  <Label fx:id="writerLabel" text="Writer" />
-                  <Label fx:id="plotLabel" text="Plot" />
-                  <Label fx:id="boxOfficeLabel" text="Box Office" />
-                  <Label fx:id="countryLabel" text="Country" />
+                  <Label fx:id="label1" text="Title" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label2" text="Runtime" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label3" text="Actors" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label4" text="Language" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label5" text="Director" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label6" text="Rotten Tomates" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label7" text="IMDB" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="label8" text="Metacritics" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label9" text="Aggregated Score" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label10" text="Rated" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label11" text="Released" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label12" text="Production" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label13" text="Country" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label14" text="Genre" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label15" text="Writer" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label16" text="Plot" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label17" text="Box Office" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
+                  <Label fx:id="label18" text="Country" textAlignment="JUSTIFY" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Label>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
